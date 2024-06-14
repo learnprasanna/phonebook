@@ -1,0 +1,10 @@
+h2{
+    color: green;
+    font-style: italic;
+}
+
+.contact_added{
+    border: 4px solid green;
+    color: green;
+    border-radius: 8px;
+}
