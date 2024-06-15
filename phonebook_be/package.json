@@ -6,7 +6,12 @@
   "scripts": {
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "install:frontend": "cd ../phonebook_fe && npm install",
+    "install:backend": "npm install",
+    "build:ui": "rm -rf dist && cd ../phonebook_fe && npm run build && cp -r dist ../phonebook_be",
+    "deploy:full": "npm run install:frontend && npm run install:backend && npm run build:ui && git add . && git commit -m 'uibuild' && git push",
+    "deploy:render": "npm run install:frontend && npm run install:backend && npm run build:ui"
   },
   "author": "DL",
   "license": "ISC",
